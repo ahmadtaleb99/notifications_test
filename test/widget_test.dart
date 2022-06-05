@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:notifications_test/MyApp.dart';
+import 'package:notifications_test/app/MyApp.dart';
 
 import 'package:notifications_test/main.dart';
 
