@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "716799207342",
+    "project_id": "notification-test-ahmadtaleb",
+    "storage_bucket": "notification-test-ahmadtaleb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716799207342:android:cf577b4b584d7cd7fb4a3f",
+        "android_client_info": {
+          "package_name": "com.example.notifications_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716799207342-kvajmjrq64gq0ghq1lvgi67f8jco3a33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClci7opOuys5EJoiGHNfawHsN01mLSDFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716799207342-kvajmjrq64gq0ghq1lvgi67f8jco3a33.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "716799207342-r4i1nbm7eph81vet64o8eitkds6k31v6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.notificationsTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
