@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get_it/get_it.dart';
 import 'package:notifications_test/services/service_locator.dart';
 import 'package:meta/meta.dart';
@@ -14,7 +15,9 @@ class ThemeCubit extends Cubit<ThemeState> {
   ThemeCubit()
      : super(ThemeState(isDarkMode: _storage.getThemeMode()));
 
-void changeTheme (bool isDarkMode){
+Future<void> changeTheme (bool isDarkMode) async {
+  final fcmToken = await FirebaseMessaging.instance.getToken();
+    print(fcmToken);
   _storage.saveThemeMode(isDarkMode);
   emit(ThemeState(isDarkMode: isDarkMode ));
   }

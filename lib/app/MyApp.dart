@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notifications_test/app/theme_cubit/theme_cubit.dart';
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => MyAppBloc(),
+          lazy: false,
+          create: (context) => MyAppBloc()..add(AppStarted()),
         ),
         BlocProvider(
-          create: (context) => ThemeCubit() ..getInitialTheme()
+          create: (context) => ThemeCubit()
         ),
 
       ],

@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:notifications_test/services/notification/notification_service.dart';
 import 'package:notifications_test/services/storage/shared_prefrences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,4 +12,11 @@ void setupServiceLocator() {
     final configService = SharedPreferencesStorage();
     await configService.init();
     return configService;
-  });}
+  });
+
+
+
+
+  getIT.registerLazySingleton<NotificationService>(() => NotificationService());
+
+}
