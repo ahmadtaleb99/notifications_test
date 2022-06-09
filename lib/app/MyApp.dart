@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           create: (context) => MyAppBloc(),
         ),
         BlocProvider(
-          create: (context) => ThemeCubit(),
+          create: (context) => ThemeCubit() ..getInitialTheme()
         ),
 
       ],

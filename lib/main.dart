@@ -5,8 +5,9 @@ import 'firebase_options.dart';
 import 'app/MyApp.dart';
 
 void main() async{
-      setupServiceLocator();
-       WidgetsFlutterBinding.ensureInitialized();
+
+  setupServiceLocator();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

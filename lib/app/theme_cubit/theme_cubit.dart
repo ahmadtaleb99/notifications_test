@@ -7,19 +7,25 @@ part 'theme_state.dart';
 
 
 class ThemeCubit extends Cubit<ThemeState> {
-final  SharedPrefrencesStorage   _storage =  getIT<SharedPrefrencesStorage>();
+
+ static final   SharedPreferencesStorage   _storage =  getIT<SharedPreferencesStorage>();
+
 
   ThemeCubit()
-     : super(ThemeState(isDarkMode: false))  {
-
-  }
+     : super(ThemeState(isDarkMode: _storage.getThemeMode()));
 
 void changeTheme (bool isDarkMode){
   _storage.saveThemeMode(isDarkMode);
   emit(ThemeState(isDarkMode: isDarkMode ));
   }
 
-  //
+
+  void getInitialTheme(){
+  // var isDarkMode =  _storage.getThemeMode();
+  // emit(ThemeState(isDarkMode: isDarkMode ));
+
+  }
+  // //
   // bool  getTheme (){
   //   _storage.getThemeMode() ?? false;
   // }
